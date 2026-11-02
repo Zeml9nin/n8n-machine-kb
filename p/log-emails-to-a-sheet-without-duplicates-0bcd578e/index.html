@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log Emails to a Sheet Without Duplicates · n8n Fixes</title>
+<meta name="description" content="Polling Gmail and appending rows is simple until the same mail is added twice.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/log-emails-to-a-sheet-without-duplicates-0bcd578e/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Log Emails to a Sheet Without Duplicates · n8n Fixes">
+<meta property="og:description" content="Polling Gmail and appending rows is simple until the same mail is added twice.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/log-emails-to-a-sheet-without-duplicates-0bcd578e/">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
+<h1>Log Emails to a Sheet Without Duplicates</h1>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
+
+<div class="prose">
+<p class="lead">Polling Gmail and appending rows is simple until the same mail is added twice.</p>
+<h2><span class="step">01</span>Symptom and Cause</h2>
+<ul><li><b>Symptom:</b> The sheet shows repeated rows after a restart or a retry.</li><li><b>Why:</b> The trigger can return a message again and Append adds it blindly.</li></ul>
+<h2><span class="step">02</span>Fix</h2>
+<ul><li>Store the Gmail message id in a column.</li><li>Use <b>Append or Update</b> with that id as the matching column.</li><li>Keep one label or filter so only intended mail is read.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/" rel="nofollow noopener">n8n Google Sheets Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/N8N_automatisation/1694" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/err_duplicate_runs/" title="#err_duplicate_runs">duplicate runs</a><a class="chip" href="../../t/node_gmail/" title="#node_gmail">gmail</a><a class="chip" href="../../t/node_google_sheets/" title="#node_google_sheets">google sheets</a><a class="chip" href="../../t/arch_idempotency/" title="#arch_idempotency">arch idempotency</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/50">Open the discussion</a>
+</aside>
+</article>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="preventing double bookings in chat assistants two customers pick the same slot within seconds and both get a confirmation. err_duplicate_runs node_postgres arch_idempotency"><a href="../../p/preventing-double-bookings-in-chat-assistants-0ca2bf5c/"><span class="t">Preventing Double Bookings in Chat Assistants</span><span class="l">Two customers pick the same slot within seconds and both get a confirmation.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">duplicate runs</span><span class="chip">postgres</span></span></a></li><li class="row" data-text="stopping webhook timeouts &amp; duplicate executions slow webhooks make providers retry, and each retry is a new run. err_webhook_timeout err_duplicate_runs node_webhook node_respond_to_webhook arch_async_webhooks arch_idempotency"><a href="../../p/stopping-webhook-timeouts-duplicate-executions-d08a3bf2/"><span class="t">Stopping Webhook Timeouts &amp; Duplicate Executions</span><span class="l">Slow webhooks make providers retry, and each retry is a new run.</span><span class="m"><time datetime="2026-10-31">2026-10-31</time><span class="chip">webhook timeout</span><span class="chip">duplicate runs</span></span></a></li><li class="row" data-text="give an agent mail access carefully an ai agent with a gmail tool can read and send. decide which of those it may do. node_ai_agent node_gmail sec_least_privilege ai_human_approval"><a href="../../p/give-an-agent-mail-access-carefully-b05a8153/"><span class="t">Give an Agent Mail Access Carefully</span><span class="l">An AI Agent with a Gmail tool can read and send. Decide which of those it may do.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">gmail</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Log Emails to a Sheet Without Duplicates", "datePublished": "2026-11-02", "description": "Polling Gmail and appending rows is simple until the same mail is added twice.", "isBasedOn": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/"}</script>
+</main>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
+</body>
+</html>
