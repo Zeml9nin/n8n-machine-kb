@@ -35,6 +35,7 @@
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/ui-looks-broken-after-an-update-dee0747e/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/form-trigger-plus-llm-chain-881077cc/</loc></url>
+<url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/send-ai-results-to-slack-safely-7bd33730/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/ai_structured_output/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/arch_error_handling/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/arch_idempotency/</loc></url>
@@ -62,4 +63,5 @@
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/node_split_out/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/node_subworkflow/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/node_webhook/</loc></url>
+<url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/sec_least_privilege/</loc></url>
 </urlset>
