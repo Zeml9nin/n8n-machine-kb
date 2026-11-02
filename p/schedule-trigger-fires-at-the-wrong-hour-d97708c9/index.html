@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule Trigger Fires at the Wrong Hour · n8n Machine Knowledge Base</title>
+<meta name="description" content="A weekly report that arrives on Friday evening for the wrong reason.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/schedule-trigger-fires-at-the-wrong-hour-d97708c9/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Schedule Trigger Fires at the Wrong Hour</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">A weekly report that arrives on Friday evening for the wrong reason.<br>
+<br>
+<b>1. Symptom and Cause</b><br>
+• <b>Symptom:</b> A cron-style flow runs one or two hours off after a server move or a Docker rebuild.<br>
+• <b>Why:</b> The trigger uses the workflow timezone, which falls back to the instance default.<br>
+<br>
+<b>2. The Fix</b><br>
+• Set the timezone in <b>Workflow Settings</b> for each time-sensitive flow.<br>
+• On self-hosting set <code>GENERIC_TIMEZONE</code> and <code>TZ</code> in your container environment.<br>
+• Remember that only <b>activated</b> workflows run on schedule.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/" rel="nofollow noopener">n8n Schedule Trigger Docs</a><br>
+Related community post: <a href="https://t.me/n8nAutomationHub/566" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/10" rel="nofollow noopener">Discuss in Help &amp; Troubleshooting</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_stop/">#err_silent_stop</a> <span>#node_schedule_trigger</span> <span>#infra_timezone</span></p>
+<p class="cta"><a href="https://t.me/n8n_machine/27">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">Upgrade n8n Without Surprises</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/fixing-0-item-drops-the-silent-if-node-halt-a7d8bc3c/">Fixing 0-Item Drops &amp; The Silent IF Node Halt</a> <time>2026-10-31</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Schedule Trigger Fires at the Wrong Hour", "datePublished": "2026-11-02", "description": "A weekly report that arrives on Friday evening for the wrong reason."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

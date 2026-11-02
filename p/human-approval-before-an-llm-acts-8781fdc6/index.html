@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human Approval Before an LLM Acts · n8n Machine Knowledge Base</title>
+<meta name="description" content="Let the model draft, let a person press the button.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/human-approval-before-an-llm-acts-8781fdc6/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Human Approval Before an LLM Acts</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">Let the model draft, let a person press the button.<br>
+<br>
+<b>1. The Risk</b><br>
+• <b>Problem:</b> An agent that can send, delete or pay will eventually do it wrongly.<br>
+• <b>Why:</b> Validation in a prompt is a request, not a guarantee.<br>
+<br>
+<b>2. The Pattern</b><br>
+• Put a <b>Send and Wait for Response</b> action (Slack, Telegram, Gmail and others) before every irreversible step.<br>
+• Add an <code>IF</code> node after it: approved continues, rejected stops and logs.<br>
+• Log the model output and the decision so audits stay possible.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/advanced-ai/" rel="nofollow noopener">n8n Advanced AI Docs</a><br>
+Related community post: <a href="https://t.me/n8node/14/16664" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/8" rel="nofollow noopener">Discuss in n8n Production: Servers &amp; Cloud</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_ai_agent/">#node_ai_agent</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_if/">#node_if</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/arch_error_handling/">#arch_error_handling</a></p>
+<p class="cta"><a href="https://t.me/n8n_slack/25">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/form-input-to-llm-validate-both-ends-8d263d04/">Form Input to LLM: Validate Both Ends</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/using-mcp-with-n8n-safely-4fd5dfa4/">Using MCP With n8n Safely</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/least-privilege-for-ai-agent-tools-e4d3082c/">Least Privilege for AI Agent Tools</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Human Approval Before an LLM Acts", "datePublished": "2026-11-02", "description": "Let the model draft, let a person press the button."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Develop Against Pinned Data · n8n Machine Knowledge Base</title>
+<meta name="description" content="Stop calling paid APIs every time you adjust one node.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/develop-against-pinned-data-f0a54873/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Develop Against Pinned Data</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">Stop calling paid APIs every time you adjust one node.<br>
+<br>
+<b>1. The Waste</b><br>
+• <b>Symptom:</b> Each test run hits the API, burns quota and changes live data.<br>
+• <b>Why:</b> Manual execution runs every node again.<br>
+<br>
+<b>2. The Fix</b><br>
+• Run the trigger once, then <b>pin</b> its output with the pin icon.<br>
+• Edit and test downstream nodes against the pinned items.<br>
+• Pinned data is used in manual runs only. Production runs ignore it.<br>
+• Unpin before you activate so nothing stale hides a bug.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/data/data-pinning/" rel="nofollow noopener">n8n Data Pinning Docs</a><br>
+Related community post: <a href="https://t.me/n8nAutomationHub/572" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/9" rel="nofollow noopener">Discuss in Start Here: n8n Fundamentals</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_code/">#node_code</a> <span>#data_pinning</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/data_item_linking/">#data_item_linking</a></p>
+<p class="cta"><a href="https://t.me/n8n_machine/32">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/double-opt-in-funnel-without-a-mailing-tool-6b20f2ee/">Double Opt-In Funnel Without a Mailing Tool</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/fixing-0-item-drops-the-silent-if-node-halt-a7d8bc3c/">Fixing 0-Item Drops &amp; The Silent IF Node Halt</a> <time>2026-10-31</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/unlocking-external-npm-packages-in-code-node-8ee869e1/">Unlocking External NPM Packages in Code Node</a> <time>2026-10-31</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Develop Against Pinned Data", "datePublished": "2026-11-02", "description": "Stop calling paid APIs every time you adjust one node."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

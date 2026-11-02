@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preventing VPS Disk Crashes with n8n Auto-Pruning · n8n Machine Knowledge Base</title>
+<meta name="description" content="Execution history grows without limit unless you cap it.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/preventing-vps-disk-crashes-with-n8n-auto-pruning-a3b8e498/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Preventing VPS Disk Crashes with n8n Auto-Pruning</h1>
+<p class="meta"><time>2026-10-31</time> · digest</p>
+<img src="https://zeml9nin.github.io/n8n-machine-kb/img/preventing-vps-disk-crashes-with-n8n-auto-pruning-a3b8e498.png" alt="Preventing VPS Disk Crashes with n8n Auto-Pruning">
+<div class="body">Execution history grows without limit unless you cap it.<br>
+<br>
+<b>1. Symptom and cause</b><br>
+• n8n fails with <code>ENOSPC</code> or timeouts and the disk is full.<br>
+• By default every execution is kept; the <code>execution_data</code> table can pass 20 GB.<br>
+<br>
+<b>2. Fix: add to <code>.env</code> or compose</b><br>
+• <code>EXECUTIONS_DATA_PRUNE=true</code><br>
+• <code>EXECUTIONS_DATA_MAX_AGE=72</code> (hours)<br>
+• <code>EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000</code><br>
+• <code>EXECUTIONS_DATA_SAVE_ON_SUCCESS=none</code> to skip successful runs<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/hosting/scaling/execution-data/" rel="nofollow noopener">n8n Scaling Docs</a><br>
+💬 <a href="https://t.me/n8n_machine/8" rel="nofollow noopener">Discuss in n8n Production: Servers &amp; Cloud</a></div>
+<p class="tags"><span>#err_disk_full</span> <span>#err_db_crash</span> <span>#infra_vps_storage</span> <span>#infra_pruning</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/infra_docker/">#infra_docker</a></p>
+<p class="cta"><a href="https://t.me/n8n_slack/9">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">Upgrade n8n Without Surprises</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/updating-self-hosted-n8n-without-surprises-35adefbe/">Updating Self-Hosted n8n Without Surprises</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Preventing VPS Disk Crashes with n8n Auto-Pruning", "datePublished": "2026-10-31", "description": "Execution history grows without limit unless you cap it."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

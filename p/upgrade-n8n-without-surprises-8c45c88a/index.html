@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upgrade n8n Without Surprises · n8n Machine Knowledge Base</title>
+<meta name="description" content="A server update that pulls the newest image can change the UI and behavior overnight.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Upgrade n8n Without Surprises</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">A server update that pulls the newest image can change the UI and behavior overnight.<br>
+<br>
+<b>1. The Risk</b><br>
+• <b>Problem:</b> Using <code>latest</code> upgrades n8n on every pull, sometimes mid-project.<br>
+• <b>Why:</b> Nobody chose that version, so nobody tested it.<br>
+<br>
+<b>2. Safer Routine</b><br>
+• Pin the image tag in <code>docker-compose.yml</code> and change it on purpose.<br>
+• Back up the database and the <code>.n8n</code> folder before each upgrade.<br>
+• Read the release notes, then upgrade a copy first.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/hosting/installation/docker/" rel="nofollow noopener">n8n Docker Docs</a><br>
+Related community post: <a href="https://t.me/n8n_community/237057" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/6" rel="nofollow noopener">Discuss in n8n Lab: Self-Hosting &amp; Security</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_stop/">#err_silent_stop</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/infra_docker/">#infra_docker</a> <span>#infra_upgrades</span></p>
+<p class="cta"><a href="https://t.me/n8n_machine/43">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/schedule-trigger-fires-at-the-wrong-hour-d97708c9/">Schedule Trigger Fires at the Wrong Hour</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/updating-self-hosted-n8n-without-surprises-35adefbe/">Updating Self-Hosted n8n Without Surprises</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Upgrade n8n Without Surprises", "datePublished": "2026-11-02", "description": "A server update that pulls the newest image can change the UI and behavior overnight."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

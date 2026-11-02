@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updating Self-Hosted n8n Without Surprises · n8n Machine Knowledge Base</title>
+<meta name="description" content="The interface or a node changes after an upgrade and you cannot tell why.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/updating-self-hosted-n8n-without-surprises-35adefbe/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Updating Self-Hosted n8n Without Surprises</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">The interface or a node changes after an upgrade and you cannot tell why.<br>
+<br>
+<b>1. Before You Update</b><br>
+• Back up the database and the <code>N8N_ENCRYPTION_KEY</code>. Without the key stored credentials cannot be read.<br>
+• Pin an exact image tag instead of <code>latest</code>.<br>
+• Read the release notes for breaking changes.<br>
+<br>
+<b>2. The Routine</b><br>
+• Update a copy first and open your critical workflows.<br>
+• Update production in a quiet hour and keep the old image for rollback.<br>
+• Check the first scheduled runs in the Executions list.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/hosting/" rel="nofollow noopener">n8n Hosting Docs</a><br>
+Related community post: <a href="https://t.me/n8n_community/237057" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/6" rel="nofollow noopener">Discuss in n8n Lab: Self-Hosting &amp; Security</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/infra_docker/">#infra_docker</a> <span>#ops_safe_update</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_failure/">#err_silent_failure</a></p>
+<p class="cta"><a href="https://t.me/n8n_machine/36">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/one-error-workflow-for-every-failure-e3f3eb77/">One Error Workflow for Every Failure</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">Upgrade n8n Without Surprises</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Updating Self-Hosted n8n Without Surprises", "datePublished": "2026-11-02", "description": "The interface or a node changes after an upgrade and you cannot tell why."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

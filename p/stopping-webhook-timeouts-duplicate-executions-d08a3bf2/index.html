@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stopping Webhook Timeouts &amp; Duplicate Executions · n8n Machine Knowledge Base</title>
+<meta name="description" content="Slow webhooks make providers retry, and each retry is a new run.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/stopping-webhook-timeouts-duplicate-executions-d08a3bf2/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Stopping Webhook Timeouts &amp; Duplicate Executions</h1>
+<p class="meta"><time>2026-10-31</time> · digest</p>
+<img src="https://zeml9nin.github.io/n8n-machine-kb/img/stopping-webhook-timeouts-duplicate-executions-d08a3bf2.png" alt="Stopping Webhook Timeouts &amp; Duplicate Executions">
+<div class="body">Slow webhooks make providers retry, and each retry is a new run.<br>
+<br>
+<b>1. Symptom and cause</b><br>
+• Telegram or Stripe sends a webhook, your AI step takes 15 s, and you get 3–5 duplicate runs.<br>
+• The default mode waits for the last node; providers give up after 5–10 s and retry.<br>
+<br>
+<b>2. Fix</b><br>
+• In the Webhook node set <b>Response Mode</b> to <code>Using 'Respond to Webhook' Node</code>.<br>
+• Put <b>Respond to Webhook</b> right after the trigger so HTTP 200 returns at once; the rest runs in the background.<br>
+• Store the event id and skip repeats if the provider may still resend.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/" rel="nofollow noopener">n8n Respond to Webhook Docs</a><br>
+💬 <a href="https://t.me/n8n_machine/10" rel="nofollow noopener">Discuss in Help &amp; Troubleshooting</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_webhook_timeout/">#err_webhook_timeout</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_duplicate_runs/">#err_duplicate_runs</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_webhook/">#node_webhook</a> <span>#node_respond_to_webhook</span> <span>#arch_async_webhooks</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/arch_idempotency/">#arch_idempotency</a></p>
+<p class="cta"><a href="https://t.me/n8n_slack/12">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/meta-webhook-setup-fails-to-verify-f998a1e4/">Meta Webhook Setup Fails to Verify</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/preventing-double-bookings-in-chat-assistants-0ca2bf5c/">Preventing Double Bookings in Chat Assistants</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Stopping Webhook Timeouts & Duplicate Executions", "datePublished": "2026-10-31", "description": "Slow webhooks make providers retry, and each retry is a new run."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

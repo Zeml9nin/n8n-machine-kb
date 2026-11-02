@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taming API Rate Limits With Batching · n8n Machine Knowledge Base</title>
+<meta name="description" content="A loop over 500 rows meets a 429 error on row 31.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/taming-api-rate-limits-with-batching-f59dd653/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Taming API Rate Limits With Batching</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">A loop over 500 rows meets a 429 error on row 31.<br>
+<br>
+<b>1. Symptom and Cause</b><br>
+• <b>Symptom:</b> <code>429 Too Many Requests</code> halfway through a list.<br>
+• <b>Why:</b> n8n sends requests as fast as items arrive.<br>
+<br>
+<b>2. Throttle It</b><br>
+• In the <code>HTTP Request</code> node open <b>Options</b> &gt; <b>Batching</b> and set items per batch and interval.<br>
+• Or use <b>Loop Over Items</b> with a <b>Wait</b> node between batches.<br>
+• Add <b>Retry On Fail</b> with a longer wait for the remaining 429 cases.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/" rel="nofollow noopener">n8n HTTP Request Docs</a><br>
+Related community post: <a href="https://t.me/n8nAutomationHub/562" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/10" rel="nofollow noopener">Discuss in Help &amp; Troubleshooting</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_http_request/">#node_http_request</a> <span>#arch_rate_limits</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/data_arrays/">#data_arrays</a></p>
+<p class="cta"><a href="https://t.me/n8n_machine/33">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/parsing-ai-agent-arrays-fixing-object-object-c34071e9/">Parsing AI Agent Arrays &amp; Fixing [object Object]</a> <time>2026-10-31</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/eliminating-object-object-in-http-request-nodes-eaeff26a/">Eliminating &quot;[object Object]&quot; in HTTP Request Nodes</a> <time>2026-10-31</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Taming API Rate Limits With Batching", "datePublished": "2026-11-02", "description": "A loop over 500 rows meets a 429 error on row 31."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

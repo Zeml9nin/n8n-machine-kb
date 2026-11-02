@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixing 0-Item Drops &amp; The Silent IF Node Halt · n8n Machine Knowledge Base</title>
+<meta name="description" content="A query that returns nothing ends the run without an error.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/fixing-0-item-drops-the-silent-if-node-halt-a7d8bc3c/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Fixing 0-Item Drops &amp; The Silent IF Node Halt</h1>
+<p class="meta"><time>2026-10-31</time> · digest</p>
+<img src="https://zeml9nin.github.io/n8n-machine-kb/img/fixing-0-item-drops-the-silent-if-node-halt-a7d8bc3c.png" alt="Fixing 0-Item Drops &amp; The Silent IF Node Halt">
+<div class="body">A query that returns nothing ends the run without an error.<br>
+<br>
+<b>1. Symptom and cause</b><br>
+• A Postgres, Airtable or Filter node finds zero matches, and the downstream <code>IF</code> never runs.<br>
+• n8n is item-driven: 0 items out means 0 runs after.<br>
+<br>
+<b>2. Fix</b><br>
+• Open the node <b>Settings</b> and turn on <b>Always Output Data</b>.<br>
+• It now emits one empty item, so the <code>IF</code> evaluates and your "not found" branch runs.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/flow-logic/looping/" rel="nofollow noopener">n8n Flow Logic Docs</a><br>
+💬 <a href="https://t.me/n8n_machine/10" rel="nofollow noopener">Discuss in Help &amp; Troubleshooting</a></div>
+<p class="tags"><span>#err_zero_items</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_stop/">#err_silent_stop</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_if/">#node_if</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_postgres/">#node_postgres</a> <span>#node_airtable</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/data_item_linking/">#data_item_linking</a></p>
+<p class="cta"><a href="https://t.me/n8n_slack/8">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/develop-against-pinned-data-f0a54873/">Develop Against Pinned Data</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/schedule-trigger-fires-at-the-wrong-hour-d97708c9/">Schedule Trigger Fires at the Wrong Hour</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/form-input-to-llm-validate-both-ends-8d263d04/">Form Input to LLM: Validate Both Ends</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Fixing 0-Item Drops & The Silent IF Node Halt", "datePublished": "2026-10-31", "description": "A query that returns nothing ends the run without an error."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preventing VPS RAM Crashes on Large Media Files · n8n Machine Knowledge Base</title>
+<meta name="description" content="Binary data kept in memory can kill a small VPS.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/preventing-vps-ram-crashes-on-large-media-files-c562d054/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Preventing VPS RAM Crashes on Large Media Files</h1>
+<p class="meta"><time>2026-10-31</time> · digest</p>
+<img src="https://zeml9nin.github.io/n8n-machine-kb/img/preventing-vps-ram-crashes-on-large-media-files-c562d054.png" alt="Preventing VPS RAM Crashes on Large Media Files">
+<div class="body">Binary data kept in memory can kill a small VPS.<br>
+<br>
+<b>1. Symptom and cause</b><br>
+• Transcribing voice messages or building large PDFs ends with <code>OOMKilled (exit 137)</code>.<br>
+• By default n8n holds binary data in RAM; a few 25 MB files use up a cheap server.<br>
+<br>
+<b>2. Fix</b><br>
+• Set <code>N8N_DEFAULT_BINARY_DATA_MODE=filesystem</code> so binaries stream to disk.<br>
+• Watch memory after the change and size the container limit to the largest file you expect.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/hosting/scaling/binary-data/" rel="nofollow noopener">n8n Binary Data Docs</a><br>
+💬 <a href="https://t.me/n8n_machine/7" rel="nofollow noopener">Discuss in n8n Sandbox VPS</a></div>
+<p class="tags"><span>#err_ram_oom</span> <span>#err_docker_kill137</span> <span>#infra_ram_tuning</span> <span>#infra_binary_filesystem</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/infra_docker/">#infra_docker</a> <span>#data_binary</span></p>
+<p class="cta"><a href="https://t.me/n8n_slack/15">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">Upgrade n8n Without Surprises</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/updating-self-hosted-n8n-without-surprises-35adefbe/">Updating Self-Hosted n8n Without Surprises</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Preventing VPS RAM Crashes on Large Media Files", "datePublished": "2026-10-31", "description": "Binary data kept in memory can kill a small VPS."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Error Alerts That Do Not Flood You · n8n Machine Knowledge Base</title>
+<meta name="description" content="One broken API can send five hundred identical messages.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/error-alerts-that-do-not-flood-you-490db373/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>Error Alerts That Do Not Flood You</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">One broken API can send five hundred identical messages.<br>
+<br>
+<b>1. The Flood</b><br>
+• <b>Problem:</b> Every failed item creates its own chat message and email.<br>
+• <b>Why:</b> The error workflow runs once per failed execution.<br>
+<br>
+<b>2. Calm It Down</b><br>
+• Build a key from workflow name and error text and look it up in a small table.<br>
+• Alert on the first occurrence and then at most once per hour.<br>
+• Send only critical workflows by email and the rest to a log sheet.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/flow-logic/error-handling/" rel="nofollow noopener">n8n Error Handling Docs</a><br>
+Related community post: <a href="https://t.me/n8nAutomationHub/569" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/8" rel="nofollow noopener">Discuss in n8n Production: Servers &amp; Cloud</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_failure/">#err_silent_failure</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_error_trigger/">#node_error_trigger</a> <span>#ops_alert_fatigue</span></p>
+<p class="cta"><a href="https://t.me/n8n_machine/42">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/one-error-workflow-for-every-failure-e3f3eb77/">One Error Workflow for Every Failure</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/silent-failures-the-production-error-trigger-713199a6/">Silent Failures: The Production Error Trigger</a> <time>2026-10-31</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/updating-self-hosted-n8n-without-surprises-35adefbe/">Updating Self-Hosted n8n Without Surprises</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Error Alerts That Do Not Flood You", "datePublished": "2026-11-02", "description": "One broken API can send five hundred identical messages."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>

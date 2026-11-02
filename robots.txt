@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zeml9nin.github.io/n8n-machine-kb/sitemap.xml

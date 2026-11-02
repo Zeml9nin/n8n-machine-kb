@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Error Workflow for Every Failure · n8n Machine Knowledge Base</title>
+<meta name="description" content="Why silent failures reach customers first and how one workflow catches them all.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/one-error-workflow-for-every-failure-e3f3eb77/">
+<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
+<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+</head>
+<body>
+<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
+<main>
+<article>
+<h1>One Error Workflow for Every Failure</h1>
+<p class="meta"><time>2026-11-02</time> · digest</p>
+
+<div class="body">Why silent failures reach customers first and how one workflow catches them all.<br>
+<br>
+<b>1. The Blind Spot</b><br>
+• <b>Symptom:</b> A scheduled flow fails overnight and nobody notices until a customer writes.<br>
+• <b>Why:</b> Failed production runs only show up in the Executions list.<br>
+<br>
+<b>2. The Fix</b><br>
+• Build one workflow that starts with an <code>Error Trigger</code> node.<br>
+• In each workflow open <b>Settings</b> &gt; <b>Error Workflow</b> and select it.<br>
+• Log workflow name, failed node and error message, then send a chat alert.<br>
+• It fires on production runs only, so test it with a real activated workflow.<br>
+<br>
+<b>Source:</b> <a href="https://docs.n8n.io/flow-logic/error-handling/" rel="nofollow noopener">n8n Error Handling Docs</a><br>
+Related community post: <a href="https://t.me/n8nAutomationHub/564" rel="nofollow noopener">1</a><br>
+💬 <a href="https://t.me/n8n_machine/10" rel="nofollow noopener">Discuss in Help &amp; Troubleshooting</a></div>
+<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_failure/">#err_silent_failure</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_error_trigger/">#node_error_trigger</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/arch_error_handling/">#arch_error_handling</a></p>
+<p class="cta"><a href="https://t.me/n8n_slack/22">Discuss this in the Telegram forum</a></p>
+</article>
+<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/silent-failures-the-production-error-trigger-713199a6/">Silent Failures: The Production Error Trigger</a> <time>2026-10-31</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/error-alerts-that-do-not-flood-you-490db373/">Error Alerts That Do Not Flood You</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/human-approval-before-an-llm-acts-8781fdc6/">Human Approval Before an LLM Acts</a> <time>2026-11-02</time></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "One Error Workflow for Every Failure", "datePublished": "2026-11-02", "description": "Why silent failures reach customers first and how one workflow catches them all."}</script>
+</main>
+<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
+Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+</body>
+</html>
