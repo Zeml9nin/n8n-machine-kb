@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Give an Agent Mail Access Carefully · n8n Fixes</title>
+<meta name="description" content="An AI Agent with a Gmail tool can read and send. Decide which of those it may do.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/give-an-agent-mail-access-carefully-b05a8153/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Give an Agent Mail Access Carefully · n8n Fixes">
+<meta property="og:description" content="An AI Agent with a Gmail tool can read and send. Decide which of those it may do.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/give-an-agent-mail-access-carefully-b05a8153/">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
+<h1>Give an Agent Mail Access Carefully</h1>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
+
+<div class="prose">
+<p class="lead">An AI Agent with a Gmail tool can read and send. Decide which of those it may do.</p>
+<h2><span class="step">01</span>The Risk</h2>
+<ul><li><b>Problem:</b> An agent with the Send operation can mail the wrong person.</li><li><b>Why:</b> The prompt guides the model; it does not enforce limits.</li></ul>
+<h2><span class="step">02</span>Safer Setup</h2>
+<ul><li>Give the tool only <b>Get Many</b> and <b>Create Draft</b>.</li><li>Let a person review drafts before sending.</li><li>Use a separate Gmail account or label for the agent.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gmail/" rel="nofollow noopener">n8n Gmail Node Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/N8N_automatisation/1700" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/node_ai_agent/" title="#node_ai_agent">ai agent</a><span class="chip" title="#node_gmail">gmail</span><a class="chip" href="../../t/sec_least_privilege/" title="#sec_least_privilege">sec least privilege</a><span class="chip" title="#ai_human_approval">ai human approval</span></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/47">Open the discussion</a>
+</aside>
+</article>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="least privilege for ai agent tools an agent with a gmail tool should rarely be able to send mail. node_ai_agent sec_least_privilege err_unhandled_crash"><a href="../../p/least-privilege-for-ai-agent-tools-e4d3082c/"><span class="t">Least Privilege for AI Agent Tools</span><span class="l">An agent with a Gmail tool should rarely be able to send mail.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">sec least privilege</span></span></a></li><li class="row" data-text="form input to llm: validate both ends user text goes in, free text comes out, and downstream nodes break. node_ai_agent ai_structured_output node_if"><a href="../../p/form-input-to-llm-validate-both-ends-8d263d04/"><span class="t">Form Input to LLM: Validate Both Ends</span><span class="l">User text goes in, free text comes out, and downstream nodes break.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">ai structured output</span></span></a></li><li class="row" data-text="human approval before an llm acts let the model draft, let a person press the button. node_ai_agent node_if arch_error_handling"><a href="../../p/human-approval-before-an-llm-acts-8781fdc6/"><span class="t">Human Approval Before an LLM Acts</span><span class="l">Let the model draft, let a person press the button.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">if</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Give an Agent Mail Access Carefully", "datePublished": "2026-11-02", "description": "An AI Agent with a Gmail tool can read and send. Decide which of those it may do.", "isBasedOn": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gmail/"}</script>
+</main>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
+</body>
+</html>
