@@ -33,6 +33,7 @@
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/error-alerts-that-do-not-flood-you-490db373/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/</loc></url>
+<url><loc>https://zeml9nin.github.io/n8n-machine-kb/p/ui-looks-broken-after-an-update-dee0747e/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/arch_error_handling/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/arch_idempotency/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/arch_subworkflows/</loc></url>
@@ -48,6 +49,8 @@
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/err_webhook_timeout/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/infra_docker/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/infra_npm_packages/</loc></url>
+<url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/infra_reverse_proxy/</loc></url>
+<url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/infra_upgrades/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/node_ai_agent/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/node_code/</loc></url>
 <url><loc>https://zeml9nin.github.io/n8n-machine-kb/t/node_error_trigger/</loc></url>
