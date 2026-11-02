@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scoring Items with an LLM · n8n Fixes</title>
+<meta name="description" content="Ranking leads or applications with a model works only if the score is machine-readable.">
+<link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/scoring-items-with-an-llm-fad68d74/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Scoring Items with an LLM · n8n Fixes">
+<meta property="og:description" content="Ranking leads or applications with a model works only if the score is machine-readable.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/scoring-items-with-an-llm-fad68d74/">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
+<h1>Scoring Items with an LLM</h1>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
+
+<div class="prose">
+<p class="lead">Ranking leads or applications with a model works only if the score is machine-readable.</p>
+<h2><span class="step">01</span>Symptom and Cause</h2>
+<ul><li><b>Symptom:</b> Scores arrive as sentences and the sheet fills with text.</li><li><b>Why:</b> A free-form prompt gives free-form answers.</li></ul>
+<h2><span class="step">02</span>Fix</h2>
+<ul><li>Ask for JSON with a numeric <code>score</code> and a short <code>reason</code>.</li><li>Validate it with a Structured Output Parser and retry on failure.</li><li>Write scores to Google Sheets, then sort and filter there.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/" rel="nofollow noopener">n8n Structured Output Parser Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/n8nAutomationHub/572" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/err_json_cast/" title="#err_json_cast">json cast</a><a class="chip" href="../../t/node_google_sheets/" title="#node_google_sheets">google sheets</a><a class="chip" href="../../t/ai_structured_output/" title="#ai_structured_output">ai structured output</a><span class="chip" title="#ai_scoring">ai scoring</span></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/51">Open the discussion</a>
+</aside>
+</article>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="form input to llm: validate both ends user text goes in, free text comes out, and downstream nodes break. node_ai_agent ai_structured_output node_if"><a href="../../p/form-input-to-llm-validate-both-ends-8d263d04/"><span class="t">Form Input to LLM: Validate Both Ends</span><span class="l">User text goes in, free text comes out, and downstream nodes break.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">ai structured output</span></span></a></li><li class="row" data-text="form trigger plus llm chain a web form that sends text to a model and returns a result in a few nodes. node_form_trigger node_llm_chain ai_structured_output"><a href="../../p/form-trigger-plus-llm-chain-881077cc/"><span class="t">Form Trigger plus LLM Chain</span><span class="l">A web form that sends text to a model and returns a result in a few nodes.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">form trigger</span><span class="chip">llm chain</span></span></a></li><li class="row" data-text="sticky notes as in-canvas docs the shortest documentation is the one next to the node it explains. node_sticky_note node_google_sheets arch_naming"><a href="../../p/sticky-notes-as-in-canvas-docs-0f638292/"><span class="t">Sticky Notes as In-Canvas Docs</span><span class="l">The shortest documentation is the one next to the node it explains.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">sticky note</span><span class="chip">google sheets</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Scoring Items with an LLM", "datePublished": "2026-11-02", "description": "Ranking leads or applications with a model works only if the score is machine-readable.", "isBasedOn": "https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/"}</script>
+</main>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
+</body>
+</html>
