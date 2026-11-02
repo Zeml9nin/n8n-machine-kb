@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Error Alerts That Do Not Flood You · n8n Machine Knowledge Base</title>
+<title>Error Alerts That Do Not Flood You · n8n Fixes</title>
 <meta name="description" content="One broken API can send five hundred identical messages.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/error-alerts-that-do-not-flood-you-490db373/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Error Alerts That Do Not Flood You · n8n Fixes">
+<meta property="og:description" content="One broken API can send five hundred identical messages.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/error-alerts-that-do-not-flood-you-490db373/">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Error Alerts That Do Not Flood You</h1>
-<p class="meta"><time>2026-11-02</time> · digest</p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
 
-<div class="body">One broken API can send five hundred identical messages.<br>
-<br>
-<b>1. The Flood</b><br>
-• <b>Problem:</b> Every failed item creates its own chat message and email.<br>
-• <b>Why:</b> The error workflow runs once per failed execution.<br>
-<br>
-<b>2. Calm It Down</b><br>
-• Build a key from workflow name and error text and look it up in a small table.<br>
-• Alert on the first occurrence and then at most once per hour.<br>
-• Send only critical workflows by email and the rest to a log sheet.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/flow-logic/error-handling/" rel="nofollow noopener">n8n Error Handling Docs</a><br>
-Related community post: <a href="https://t.me/n8nAutomationHub/569" rel="nofollow noopener">1</a><br>
-💬 <a href="https://t.me/n8n_machine/8" rel="nofollow noopener">Discuss in n8n Production: Servers &amp; Cloud</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_failure/">#err_silent_failure</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_error_trigger/">#node_error_trigger</a> <span>#ops_alert_fatigue</span></p>
-<p class="cta"><a href="https://t.me/n8n_machine/42">Discuss this in the Telegram forum</a></p>
+<div class="prose">
+<p class="lead">One broken API can send five hundred identical messages.</p>
+<h2><span class="step">01</span>The Flood</h2>
+<ul><li><b>Problem:</b> Every failed item creates its own chat message and email.</li><li><b>Why:</b> The error workflow runs once per failed execution.</li></ul>
+<h2><span class="step">02</span>Calm It Down</h2>
+<ul><li>Build a key from workflow name and error text and look it up in a small table.</li><li>Alert on the first occurrence and then at most once per hour.</li><li>Send only critical workflows by email and the rest to a log sheet.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/flow-logic/error-handling/" rel="nofollow noopener">n8n Error Handling Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/n8nAutomationHub/569" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/err_silent_failure/" title="#err_silent_failure">silent failure</a><a class="chip" href="../../t/node_error_trigger/" title="#node_error_trigger">error trigger</a><span class="chip" title="#ops_alert_fatigue">ops alert fatigue</span></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/42">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/one-error-workflow-for-every-failure-e3f3eb77/">One Error Workflow for Every Failure</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/silent-failures-the-production-error-trigger-713199a6/">Silent Failures: The Production Error Trigger</a> <time>2026-10-31</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/updating-self-hosted-n8n-without-surprises-35adefbe/">Updating Self-Hosted n8n Without Surprises</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Error Alerts That Do Not Flood You", "datePublished": "2026-11-02", "description": "One broken API can send five hundred identical messages."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="one error workflow for every failure why silent failures reach customers first and how one workflow catches them all. err_silent_failure node_error_trigger arch_error_handling"><a href="../../p/one-error-workflow-for-every-failure-e3f3eb77/"><span class="t">One Error Workflow for Every Failure</span><span class="l">Why silent failures reach customers first and how one workflow catches them all.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">silent failure</span><span class="chip">error trigger</span></span></a></li><li class="row" data-text="silent failures: the production error trigger catch silent failures before a user reports them. err_silent_failure err_unhandled_crash node_error_trigger arch_error_handling"><a href="../../p/silent-failures-the-production-error-trigger-713199a6/"><span class="t">Silent Failures: The Production Error Trigger</span><span class="l">Catch silent failures before a user reports them.</span><span class="m"><time datetime="2026-10-31">2026-10-31</time><span class="chip">silent failure</span><span class="chip">unhandled crash</span></span></a></li><li class="row" data-text="updating self-hosted n8n without surprises the interface or a node changes after an upgrade and you cannot tell why. infra_docker ops_safe_update err_silent_failure"><a href="../../p/updating-self-hosted-n8n-without-surprises-35adefbe/"><span class="t">Updating Self-Hosted n8n Without Surprises</span><span class="l">The interface or a node changes after an upgrade and you cannot tell why.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">infra docker</span><span class="chip">ops safe update</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Error Alerts That Do Not Flood You", "datePublished": "2026-11-02", "description": "One broken API can send five hundred identical messages.", "isBasedOn": "https://docs.n8n.io/flow-logic/error-handling/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

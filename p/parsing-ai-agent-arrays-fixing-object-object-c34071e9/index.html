@@ -3,38 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Parsing AI Agent Arrays &amp; Fixing [object Object] · n8n Machine Knowledge Base</title>
+<title>Parsing AI Agent Arrays &amp; Fixing [object Object] · n8n Fixes</title>
 <meta name="description" content="Two common data-shape errors and their fixes.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/parsing-ai-agent-arrays-fixing-object-object-c34071e9/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Parsing AI Agent Arrays &amp; Fixing [object Object] · n8n Fixes">
+<meta property="og:description" content="Two common data-shape errors and their fixes.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/parsing-ai-agent-arrays-fixing-object-object-c34071e9/">
+<meta property="og:image" content="https://zeml9nin.github.io/n8n-machine-kb/img/parsing-ai-agent-arrays-fixing-object-object-c34071e9.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Parsing AI Agent Arrays &amp; Fixing [object Object]</h1>
-<p class="meta"><time>2026-10-31</time> · digest</p>
-<img src="https://zeml9nin.github.io/n8n-machine-kb/img/parsing-ai-agent-arrays-fixing-object-object-c34071e9.png" alt="Parsing AI Agent Arrays &amp; Fixing [object Object]">
-<div class="body">Two common data-shape errors and their fixes.<br>
-<br>
-<b>1. Array in one item</b><br>
-• <b>Symptom:</b> An AI node returns one item with <code>leads: [...]</code>, so Google Sheets writes only row 1.<br>
-• <b>Fix:</b> Add a <b>Split Out</b> node on <code>leads</code>; each element becomes its own item.<br>
-<br>
-<b>2. "[object Object]" in HTTP Request</b><br>
-• <b>Symptom:</b> The API receives the literal text <code>[object Object]</code>.<br>
-• <b>Fix:</b> Send <code>JSON.stringify($json.myObj)</code>, or set the body to <b>JSON</b> and pass <code>$json.myObj</code>.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/data/data-structure/" rel="nofollow noopener">n8n Data Structure Docs</a><br>
-💬 <a href="https://t.me/n8n_machine/10" rel="nofollow noopener">Discuss in Help &amp; Troubleshooting</a></div>
-<p class="tags"><span>#err_nested_array</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_object_object/">#err_object_object</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_split_out/">#node_split_out</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_http_request/">#node_http_request</a> <span>#node_google_sheets</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/data_arrays/">#data_arrays</a></p>
-<p class="cta"><a href="https://t.me/n8n_slack/7">Discuss this in the Telegram forum</a></p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-10-31">2026-10-31</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Corrected, revision 2</dd></div>
+</dl>
+<figure><img src="../../img/parsing-ai-agent-arrays-fixing-object-object-c34071e9.png" width="1200" height="675" alt="Diagram: Parsing AI Agent Arrays &amp; Fixing [object Object]" decoding="async"></figure>
+<div class="prose">
+<p class="lead">Two common data-shape errors and their fixes.</p>
+<h2><span class="step">01</span>Array in one item</h2>
+<ul><li><b>Symptom:</b> An AI node returns one item with <code>leads: [...]</code>, so Google Sheets writes only row 1.</li><li><b>Fix:</b> Add a <b>Split Out</b> node on <code>leads</code>; each element becomes its own item.</li></ul>
+<h2><span class="step">02</span>"[object Object]" in HTTP Request</h2>
+<ul><li><b>Symptom:</b> The API receives the literal text <code>[object Object]</code>.</li><li><b>Fix:</b> Send <code>JSON.stringify($json.myObj)</code>, or set the body to <b>JSON</b> and pass <code>$json.myObj</code>.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/data/data-structure/" rel="nofollow noopener">n8n Data Structure Docs</a></p>
+</div>
+<div class="chips"><span class="chip" title="#err_nested_array">nested array</span><a class="chip" href="../../t/err_object_object/" title="#err_object_object">object object</a><a class="chip" href="../../t/node_split_out/" title="#node_split_out">split out</a><a class="chip" href="../../t/node_http_request/" title="#node_http_request">http request</a><span class="chip" title="#node_google_sheets">google sheets</span><a class="chip" href="../../t/data_arrays/" title="#data_arrays">data arrays</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_slack/7">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/taming-api-rate-limits-with-batching-f59dd653/">Taming API Rate Limits With Batching</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/eliminating-object-object-in-http-request-nodes-eaeff26a/">Eliminating &quot;[object Object]&quot; in HTTP Request Nodes</a> <time>2026-10-31</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/one-llm-call-instead-of-fifty-3dd4aa96/">One LLM Call Instead of Fifty</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Parsing AI Agent Arrays & Fixing [object Object]", "datePublished": "2026-10-31", "description": "Two common data-shape errors and their fixes."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="taming api rate limits with batching a loop over 500 rows meets a 429 error on row 31. node_http_request arch_rate_limits data_arrays"><a href="../../p/taming-api-rate-limits-with-batching-f59dd653/"><span class="t">Taming API Rate Limits With Batching</span><span class="l">A loop over 500 rows meets a 429 error on row 31.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">http request</span><span class="chip">arch rate limits</span></span></a></li><li class="row" data-text="eliminating &quot;[object object]&quot; in http request nodes how to send structured json without string-casting. err_object_object err_json_cast node_http_request data_json"><a href="../../p/eliminating-object-object-in-http-request-nodes-eaeff26a/"><span class="t">Eliminating &quot;[object Object]&quot; in HTTP Request Nodes</span><span class="l">How to send structured JSON without string-casting.</span><span class="m"><time datetime="2026-10-31">2026-10-31</time><span class="chip">object object</span><span class="chip">json cast</span></span></a></li><li class="row" data-text="one llm call instead of fifty aggregate items first and pay for a single prompt. node_split_out ai_prompt_batching node_ai_agent"><a href="../../p/one-llm-call-instead-of-fifty-3dd4aa96/"><span class="t">One LLM Call Instead of Fifty</span><span class="l">Aggregate items first and pay for a single prompt.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">split out</span><span class="chip">ai prompt batching</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Parsing AI Agent Arrays & Fixing [object Object]", "datePublished": "2026-10-31", "description": "Two common data-shape errors and their fixes.", "isBasedOn": "https://docs.n8n.io/data/data-structure/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

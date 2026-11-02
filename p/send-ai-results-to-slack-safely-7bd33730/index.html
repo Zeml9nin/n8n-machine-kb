@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Send AI Results to Slack Safely · n8n Machine Knowledge Base</title>
+<title>Send AI Results to Slack Safely · n8n Fixes</title>
 <meta name="description" content="Posting model output to a channel needs limits, or one bad prompt floods it.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/send-ai-results-to-slack-safely-7bd33730/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Send AI Results to Slack Safely · n8n Fixes">
+<meta property="og:description" content="Posting model output to a channel needs limits, or one bad prompt floods it.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/send-ai-results-to-slack-safely-7bd33730/">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Send AI Results to Slack Safely</h1>
-<p class="meta"><time>2026-11-02</time> · digest</p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
 
-<div class="body">Posting model output to a channel needs limits, or one bad prompt floods it.<br>
-<br>
-<b>1. Symptom and Cause</b><br>
-• <b>Symptom:</b> A loop posts dozens of long messages and Slack rate-limits the bot.<br>
-• <b>Why:</b> One message per item, with no cap on length or count.<br>
-<br>
-<b>2. Fix</b><br>
-• Join items into one digest message before the <b>Slack</b> node.<br>
-• Cut the text to a fixed length and keep the full answer in a log.<br>
-• Use a dedicated bot credential with access to one channel only.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack/" rel="nofollow noopener">n8n Slack Node Docs</a><br>
-Related community post: <a href="https://t.me/N8N_automatisation/1702" rel="nofollow noopener">1</a><br>
-💬 <a href="https://t.me/n8n_machine/8" rel="nofollow noopener">Discuss in n8n Production: Servers &amp; Cloud</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_webhook_timeout/">#err_webhook_timeout</a> <span>#node_slack</span> <span>#ai_llm_output</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/sec_least_privilege/">#sec_least_privilege</a></p>
-<p class="cta"><a href="https://t.me/n8n_machine/46">Discuss this in the Telegram forum</a></p>
+<div class="prose">
+<p class="lead">Posting model output to a channel needs limits, or one bad prompt floods it.</p>
+<h2><span class="step">01</span>Symptom and Cause</h2>
+<ul><li><b>Symptom:</b> A loop posts dozens of long messages and Slack rate-limits the bot.</li><li><b>Why:</b> One message per item, with no cap on length or count.</li></ul>
+<h2><span class="step">02</span>Fix</h2>
+<ul><li>Join items into one digest message before the <b>Slack</b> node.</li><li>Cut the text to a fixed length and keep the full answer in a log.</li><li>Use a dedicated bot credential with access to one channel only.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack/" rel="nofollow noopener">n8n Slack Node Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/N8N_automatisation/1702" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/err_webhook_timeout/" title="#err_webhook_timeout">webhook timeout</a><span class="chip" title="#node_slack">slack</span><span class="chip" title="#ai_llm_output">ai llm output</span><a class="chip" href="../../t/sec_least_privilege/" title="#sec_least_privilege">sec least privilege</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/46">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/meta-webhook-setup-fails-to-verify-f998a1e4/">Meta Webhook Setup Fails to Verify</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/least-privilege-for-ai-agent-tools-e4d3082c/">Least Privilege for AI Agent Tools</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/stopping-webhook-timeouts-duplicate-executions-d08a3bf2/">Stopping Webhook Timeouts &amp; Duplicate Executions</a> <time>2026-10-31</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Send AI Results to Slack Safely", "datePublished": "2026-11-02", "description": "Posting model output to a channel needs limits, or one bad prompt floods it."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="meta webhook setup fails to verify instagram and facebook refuse the callback url and no execution appears. err_webhook_timeout node_webhook integ_meta_webhook"><a href="../../p/meta-webhook-setup-fails-to-verify-f998a1e4/"><span class="t">Meta Webhook Setup Fails to Verify</span><span class="l">Instagram and Facebook refuse the callback URL and no execution appears.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">webhook timeout</span><span class="chip">webhook</span></span></a></li><li class="row" data-text="least privilege for ai agent tools an agent with a gmail tool should rarely be able to send mail. node_ai_agent sec_least_privilege err_unhandled_crash"><a href="../../p/least-privilege-for-ai-agent-tools-e4d3082c/"><span class="t">Least Privilege for AI Agent Tools</span><span class="l">An agent with a Gmail tool should rarely be able to send mail.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">sec least privilege</span></span></a></li><li class="row" data-text="stopping webhook timeouts &amp; duplicate executions slow webhooks make providers retry, and each retry is a new run. err_webhook_timeout err_duplicate_runs node_webhook node_respond_to_webhook arch_async_webhooks arch_idempotency"><a href="../../p/stopping-webhook-timeouts-duplicate-executions-d08a3bf2/"><span class="t">Stopping Webhook Timeouts &amp; Duplicate Executions</span><span class="l">Slow webhooks make providers retry, and each retry is a new run.</span><span class="m"><time datetime="2026-10-31">2026-10-31</time><span class="chip">webhook timeout</span><span class="chip">duplicate runs</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Send AI Results to Slack Safely", "datePublished": "2026-11-02", "description": "Posting model output to a channel needs limits, or one bad prompt floods it.", "isBasedOn": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

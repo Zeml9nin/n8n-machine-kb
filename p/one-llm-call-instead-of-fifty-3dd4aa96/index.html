@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One LLM Call Instead of Fifty · n8n Machine Knowledge Base</title>
+<title>One LLM Call Instead of Fifty · n8n Fixes</title>
 <meta name="description" content="Aggregate items first and pay for a single prompt.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/one-llm-call-instead-of-fifty-3dd4aa96/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="One LLM Call Instead of Fifty · n8n Fixes">
+<meta property="og:description" content="Aggregate items first and pay for a single prompt.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/one-llm-call-instead-of-fifty-3dd4aa96/">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>One LLM Call Instead of Fifty</h1>
-<p class="meta"><time>2026-11-02</time> · digest</p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
 
-<div class="body">Aggregate items first and pay for a single prompt.<br>
-<br>
-<b>1. The Waste</b><br>
-• <b>Symptom:</b> A model node runs once per item and the bill and the latency grow with the list.<br>
-• <b>Why:</b> Nodes process every incoming item separately.<br>
-<br>
-<b>2. The Fix</b><br>
-• Place an <b>Aggregate</b> node before the model to merge items into one list.<br>
-• Ask for one structured answer that covers all entries.<br>
-• Split the answer back with <code>Split Out</code> if later steps need single items.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/data/data-structure/" rel="nofollow noopener">n8n Data Structure Docs</a><br>
-Related community post: <a href="https://t.me/N8N_automatisation/1666" rel="nofollow noopener">1</a><br>
-💬 <a href="https://t.me/n8n_machine/10" rel="nofollow noopener">Discuss in Help &amp; Troubleshooting</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_split_out/">#node_split_out</a> <span>#ai_prompt_batching</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_ai_agent/">#node_ai_agent</a></p>
-<p class="cta"><a href="https://t.me/n8n_machine/39">Discuss this in the Telegram forum</a></p>
+<div class="prose">
+<p class="lead">Aggregate items first and pay for a single prompt.</p>
+<h2><span class="step">01</span>The Waste</h2>
+<ul><li><b>Symptom:</b> A model node runs once per item and the bill and the latency grow with the list.</li><li><b>Why:</b> Nodes process every incoming item separately.</li></ul>
+<h2><span class="step">02</span>The Fix</h2>
+<ul><li>Place an <b>Aggregate</b> node before the model to merge items into one list.</li><li>Ask for one structured answer that covers all entries.</li><li>Split the answer back with <code>Split Out</code> if later steps need single items.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/data/data-structure/" rel="nofollow noopener">n8n Data Structure Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/N8N_automatisation/1666" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/node_split_out/" title="#node_split_out">split out</a><span class="chip" title="#ai_prompt_batching">ai prompt batching</span><a class="chip" href="../../t/node_ai_agent/" title="#node_ai_agent">ai agent</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/39">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/least-privilege-for-ai-agent-tools-e4d3082c/">Least Privilege for AI Agent Tools</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/form-input-to-llm-validate-both-ends-8d263d04/">Form Input to LLM: Validate Both Ends</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/human-approval-before-an-llm-acts-8781fdc6/">Human Approval Before an LLM Acts</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "One LLM Call Instead of Fifty", "datePublished": "2026-11-02", "description": "Aggregate items first and pay for a single prompt."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="least privilege for ai agent tools an agent with a gmail tool should rarely be able to send mail. node_ai_agent sec_least_privilege err_unhandled_crash"><a href="../../p/least-privilege-for-ai-agent-tools-e4d3082c/"><span class="t">Least Privilege for AI Agent Tools</span><span class="l">An agent with a Gmail tool should rarely be able to send mail.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">sec least privilege</span></span></a></li><li class="row" data-text="form input to llm: validate both ends user text goes in, free text comes out, and downstream nodes break. node_ai_agent ai_structured_output node_if"><a href="../../p/form-input-to-llm-validate-both-ends-8d263d04/"><span class="t">Form Input to LLM: Validate Both Ends</span><span class="l">User text goes in, free text comes out, and downstream nodes break.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">ai structured output</span></span></a></li><li class="row" data-text="human approval before an llm acts let the model draft, let a person press the button. node_ai_agent node_if arch_error_handling"><a href="../../p/human-approval-before-an-llm-acts-8781fdc6/"><span class="t">Human Approval Before an LLM Acts</span><span class="l">Let the model draft, let a person press the button.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">if</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "One LLM Call Instead of Fifty", "datePublished": "2026-11-02", "description": "Aggregate items first and pay for a single prompt.", "isBasedOn": "https://docs.n8n.io/data/data-structure/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

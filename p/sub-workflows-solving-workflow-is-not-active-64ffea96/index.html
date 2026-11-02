@@ -3,41 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sub-Workflows: Solving &quot;Workflow is not active&quot; · n8n Machine Knowledge Base</title>
+<title>Sub-Workflows: Solving &quot;Workflow is not active&quot; · n8n Fixes</title>
 <meta name="description" content="How to build modular workflows without activation errors.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/sub-workflows-solving-workflow-is-not-active-64ffea96/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Sub-Workflows: Solving &quot;Workflow is not active&quot; · n8n Fixes">
+<meta property="og:description" content="How to build modular workflows without activation errors.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/sub-workflows-solving-workflow-is-not-active-64ffea96/">
+<meta property="og:image" content="https://zeml9nin.github.io/n8n-machine-kb/img/sub-workflows-solving-workflow-is-not-active-64ffea96.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Sub-Workflows: Solving &quot;Workflow is not active&quot;</h1>
-<p class="meta"><time>2026-10-31</time> · digest</p>
-<img src="https://zeml9nin.github.io/n8n-machine-kb/img/sub-workflows-solving-workflow-is-not-active-64ffea96.png" alt="Sub-Workflows: Solving &quot;Workflow is not active&quot;">
-<div class="body">How to build modular workflows without activation errors.<br>
-<br>
-<b>1. The "Workflow Not Active" Trap</b><br>
-• <b>Symptom:</b> <code>Execute Sub-workflow</code> node throws <i>Workflow is not active and cannot be executed</i>, or returns empty data.<br>
-• <b>Why:</b> Using a Manual or Webhook trigger inside the child workflow instead of the dedicated execution trigger.<br>
-<br>
-<b>2. The Clean Sub-Workflow Pattern</b><br>
-• <b>In Child Workflow:</b><br>
-Start with the <b>When Executed by Another Workflow</b> trigger node.<br>
-Child workflow status does NOT need to be Active! It can stay Inactive.<br>
-• <b>In Parent Workflow:</b><br>
-Use <b>Execute Sub-workflow</b> node and enable <b>Wait for Sub-Workflow Completion</b>.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/flow-logic/sub-workflows/" rel="nofollow noopener">n8n Sub-Workflows Docs</a><br>
-💬 <a href="https://t.me/n8n_machine/9" rel="nofollow noopener">Discuss in n8n Fundamentals</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_subworkflow_inactive/">#err_subworkflow_inactive</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_subworkflow/">#node_subworkflow</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/arch_subworkflows/">#arch_subworkflows</a></p>
-<p class="cta"><a href="https://t.me/n8n_slack/16">Discuss this in the Telegram forum</a></p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-10-31">2026-10-31</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
+<figure><img src="../../img/sub-workflows-solving-workflow-is-not-active-64ffea96.png" width="1200" height="675" alt="Diagram: Sub-Workflows: Solving &quot;Workflow is not active&quot;" decoding="async"></figure>
+<div class="prose">
+<p class="lead">How to build modular workflows without activation errors.</p>
+<h2><span class="step">01</span>The "Workflow Not Active" Trap</h2>
+<ul><li><b>Symptom:</b> <code>Execute Sub-workflow</code> node throws <i>Workflow is not active and cannot be executed</i>, or returns empty data.</li><li><b>Why:</b> Using a Manual or Webhook trigger inside the child workflow instead of the dedicated execution trigger.</li></ul>
+<h2><span class="step">02</span>The Clean Sub-Workflow Pattern</h2>
+<ul><li><b>In Child Workflow:</b></li></ul>
+<p>Start with the <b>When Executed by Another Workflow</b> trigger node.</p>
+<p>Child workflow status does NOT need to be Active! It can stay Inactive.</p>
+<ul><li><b>In Parent Workflow:</b></li></ul>
+<p>Use <b>Execute Sub-workflow</b> node and enable <b>Wait for Sub-Workflow Completion</b>.</p>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/flow-logic/sub-workflows/" rel="nofollow noopener">n8n Sub-Workflows Docs</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/err_subworkflow_inactive/" title="#err_subworkflow_inactive">subworkflow inactive</a><a class="chip" href="../../t/node_subworkflow/" title="#node_subworkflow">subworkflow</a><a class="chip" href="../../t/arch_subworkflows/" title="#arch_subworkflows">arch subworkflows</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_slack/16">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/sub-workflows-solving-workflow-is-not-active-547b172c/">Sub-Workflows: Solving &quot;Workflow is not active&quot;</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/versioning-workflows-like-code-016ff1cc/">Versioning Workflows Like Code</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/safe-retries-for-money-adjacent-flows-41990c51/">Safe Retries for Money-Adjacent Flows</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sub-Workflows: Solving \"Workflow is not active\"", "datePublished": "2026-10-31", "description": "How to build modular workflows without activation errors."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="sub-workflows: solving &quot;workflow is not active&quot; build modular workflows without activation errors. err_subworkflow_inactive node_subworkflow arch_subworkflows"><a href="../../p/sub-workflows-solving-workflow-is-not-active-547b172c/"><span class="t">Sub-Workflows: Solving &quot;Workflow is not active&quot;</span><span class="l">Build modular workflows without activation errors.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">subworkflow inactive</span><span class="chip">subworkflow</span></span></a></li><li class="row" data-text="versioning workflows like code ai-generated or hand-built, a workflow you cannot roll back is a liability. err_unhandled_crash arch_subworkflows node_subworkflow"><a href="../../p/versioning-workflows-like-code-016ff1cc/"><span class="t">Versioning Workflows Like Code</span><span class="l">AI-generated or hand-built, a workflow you cannot roll back is a liability.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">unhandled crash</span><span class="chip">arch subworkflows</span></span></a></li><li class="row" data-text="safe retries for money-adjacent flows retries fix flaky apis, but only if repeating a step cannot do harm. err_unhandled_crash arch_error_handling arch_subworkflows"><a href="../../p/safe-retries-for-money-adjacent-flows-41990c51/"><span class="t">Safe Retries for Money-Adjacent Flows</span><span class="l">Retries fix flaky APIs, but only if repeating a step cannot do harm.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">unhandled crash</span><span class="chip">arch error handling</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sub-Workflows: Solving \"Workflow is not active\"", "datePublished": "2026-10-31", "description": "How to build modular workflows without activation errors.", "isBasedOn": "https://docs.n8n.io/flow-logic/sub-workflows/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

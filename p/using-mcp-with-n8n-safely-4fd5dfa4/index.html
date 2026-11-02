@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Using MCP With n8n Safely · n8n Machine Knowledge Base</title>
+<title>Using MCP With n8n Safely · n8n Fixes</title>
 <meta name="description" content="Connect models to your tools without handing them the keys.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/using-mcp-with-n8n-safely-4fd5dfa4/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Using MCP With n8n Safely · n8n Fixes">
+<meta property="og:description" content="Connect models to your tools without handing them the keys.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/using-mcp-with-n8n-safely-4fd5dfa4/">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Using MCP With n8n Safely</h1>
-<p class="meta"><time>2026-11-02</time> · digest</p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
 
-<div class="body">Connect models to your tools without handing them the keys.<br>
-<br>
-<b>1. Two Directions</b><br>
-• <b>MCP Client Tool:</b> lets an agent call tools of an external MCP server.<br>
-• <b>MCP Server Trigger:</b> exposes selected n8n tools to outside clients.<br>
-<br>
-<b>2. Guardrails</b><br>
-• Expose only the tools the task needs. Each tool is an attack surface.<br>
-• Protect the endpoint with authentication and keep it off the open internet where possible.<br>
-• Prefer read-only tools and put approval in front of writes.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/advanced-ai/" rel="nofollow noopener">n8n Advanced AI Docs</a><br>
-Related community post: <a href="https://t.me/n8n_community/236758" rel="nofollow noopener">1</a><br>
-💬 <a href="https://t.me/n8n_machine/6" rel="nofollow noopener">Discuss in n8n Lab: Self-Hosting &amp; Security</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_ai_agent/">#node_ai_agent</a> <span>#ai_mcp</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/arch_error_handling/">#arch_error_handling</a></p>
-<p class="cta"><a href="https://t.me/n8n_machine/35">Discuss this in the Telegram forum</a></p>
+<div class="prose">
+<p class="lead">Connect models to your tools without handing them the keys.</p>
+<h2><span class="step">01</span>Two Directions</h2>
+<ul><li><b>MCP Client Tool:</b> lets an agent call tools of an external MCP server.</li><li><b>MCP Server Trigger:</b> exposes selected n8n tools to outside clients.</li></ul>
+<h2><span class="step">02</span>Guardrails</h2>
+<ul><li>Expose only the tools the task needs. Each tool is an attack surface.</li><li>Protect the endpoint with authentication and keep it off the open internet where possible.</li><li>Prefer read-only tools and put approval in front of writes.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/advanced-ai/" rel="nofollow noopener">n8n Advanced AI Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/n8n_community/236758" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/node_ai_agent/" title="#node_ai_agent">ai agent</a><span class="chip" title="#ai_mcp">ai mcp</span><a class="chip" href="../../t/arch_error_handling/" title="#arch_error_handling">arch error handling</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/35">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/human-approval-before-an-llm-acts-8781fdc6/">Human Approval Before an LLM Acts</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/least-privilege-for-ai-agent-tools-e4d3082c/">Least Privilege for AI Agent Tools</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/one-error-workflow-for-every-failure-e3f3eb77/">One Error Workflow for Every Failure</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Using MCP With n8n Safely", "datePublished": "2026-11-02", "description": "Connect models to your tools without handing them the keys."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="human approval before an llm acts let the model draft, let a person press the button. node_ai_agent node_if arch_error_handling"><a href="../../p/human-approval-before-an-llm-acts-8781fdc6/"><span class="t">Human Approval Before an LLM Acts</span><span class="l">Let the model draft, let a person press the button.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">if</span></span></a></li><li class="row" data-text="least privilege for ai agent tools an agent with a gmail tool should rarely be able to send mail. node_ai_agent sec_least_privilege err_unhandled_crash"><a href="../../p/least-privilege-for-ai-agent-tools-e4d3082c/"><span class="t">Least Privilege for AI Agent Tools</span><span class="l">An agent with a Gmail tool should rarely be able to send mail.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">ai agent</span><span class="chip">sec least privilege</span></span></a></li><li class="row" data-text="one error workflow for every failure why silent failures reach customers first and how one workflow catches them all. err_silent_failure node_error_trigger arch_error_handling"><a href="../../p/one-error-workflow-for-every-failure-e3f3eb77/"><span class="t">One Error Workflow for Every Failure</span><span class="l">Why silent failures reach customers first and how one workflow catches them all.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">silent failure</span><span class="chip">error trigger</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Using MCP With n8n Safely", "datePublished": "2026-11-02", "description": "Connect models to your tools without handing them the keys.", "isBasedOn": "https://docs.n8n.io/advanced-ai/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

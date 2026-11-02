@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Preventing VPS Disk Crashes with n8n Auto-Pruning · n8n Machine Knowledge Base</title>
+<title>Preventing VPS Disk Crashes with n8n Auto-Pruning · n8n Fixes</title>
 <meta name="description" content="Execution history grows without limit unless you cap it.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/preventing-vps-disk-crashes-with-n8n-auto-pruning-a3b8e498/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Preventing VPS Disk Crashes with n8n Auto-Pruning · n8n Fixes">
+<meta property="og:description" content="Execution history grows without limit unless you cap it.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/preventing-vps-disk-crashes-with-n8n-auto-pruning-a3b8e498/">
+<meta property="og:image" content="https://zeml9nin.github.io/n8n-machine-kb/img/preventing-vps-disk-crashes-with-n8n-auto-pruning-a3b8e498.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Preventing VPS Disk Crashes with n8n Auto-Pruning</h1>
-<p class="meta"><time>2026-10-31</time> · digest</p>
-<img src="https://zeml9nin.github.io/n8n-machine-kb/img/preventing-vps-disk-crashes-with-n8n-auto-pruning-a3b8e498.png" alt="Preventing VPS Disk Crashes with n8n Auto-Pruning">
-<div class="body">Execution history grows without limit unless you cap it.<br>
-<br>
-<b>1. Symptom and cause</b><br>
-• n8n fails with <code>ENOSPC</code> or timeouts and the disk is full.<br>
-• By default every execution is kept; the <code>execution_data</code> table can pass 20 GB.<br>
-<br>
-<b>2. Fix: add to <code>.env</code> or compose</b><br>
-• <code>EXECUTIONS_DATA_PRUNE=true</code><br>
-• <code>EXECUTIONS_DATA_MAX_AGE=72</code> (hours)<br>
-• <code>EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000</code><br>
-• <code>EXECUTIONS_DATA_SAVE_ON_SUCCESS=none</code> to skip successful runs<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/hosting/scaling/execution-data/" rel="nofollow noopener">n8n Scaling Docs</a><br>
-💬 <a href="https://t.me/n8n_machine/8" rel="nofollow noopener">Discuss in n8n Production: Servers &amp; Cloud</a></div>
-<p class="tags"><span>#err_disk_full</span> <span>#err_db_crash</span> <span>#infra_vps_storage</span> <span>#infra_pruning</span> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/infra_docker/">#infra_docker</a></p>
-<p class="cta"><a href="https://t.me/n8n_slack/9">Discuss this in the Telegram forum</a></p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-10-31">2026-10-31</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Corrected, revision 2</dd></div>
+</dl>
+<figure><img src="../../img/preventing-vps-disk-crashes-with-n8n-auto-pruning-a3b8e498.png" width="1200" height="675" alt="Diagram: Preventing VPS Disk Crashes with n8n Auto-Pruning" decoding="async"></figure>
+<div class="prose">
+<p class="lead">Execution history grows without limit unless you cap it.</p>
+<h2><span class="step">01</span>Symptom and cause</h2>
+<ul><li>n8n fails with <code>ENOSPC</code> or timeouts and the disk is full.</li><li>By default every execution is kept; the <code>execution_data</code> table can pass 20 GB.</li></ul>
+<h2><span class="step">02</span>Fix: add to <code>.env</code> or compose</h2>
+<ul><li><code>EXECUTIONS_DATA_PRUNE=true</code></li><li><code>EXECUTIONS_DATA_MAX_AGE=72</code> (hours)</li><li><code>EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000</code></li><li><code>EXECUTIONS_DATA_SAVE_ON_SUCCESS=none</code> to skip successful runs</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/hosting/scaling/execution-data/" rel="nofollow noopener">n8n Scaling Docs</a></p>
+</div>
+<div class="chips"><span class="chip" title="#err_disk_full">disk full</span><span class="chip" title="#err_db_crash">db crash</span><span class="chip" title="#infra_vps_storage">infra vps storage</span><span class="chip" title="#infra_pruning">infra pruning</span><a class="chip" href="../../t/infra_docker/" title="#infra_docker">infra docker</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_slack/9">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">Upgrade n8n Without Surprises</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/updating-self-hosted-n8n-without-surprises-35adefbe/">Updating Self-Hosted n8n Without Surprises</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Preventing VPS Disk Crashes with n8n Auto-Pruning", "datePublished": "2026-10-31", "description": "Execution history grows without limit unless you cap it."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="webhook url shows localhost behind a proxy external services call an address that does not exist. node_webhook infra_reverse_proxy infra_docker"><a href="../../p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/"><span class="t">Webhook URL Shows localhost Behind a Proxy</span><span class="l">External services call an address that does not exist.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">webhook</span><span class="chip">infra reverse proxy</span></span></a></li><li class="row" data-text="upgrade n8n without surprises a server update that pulls the newest image can change the ui and behavior overnight. err_silent_stop infra_docker infra_upgrades"><a href="../../p/upgrade-n8n-without-surprises-8c45c88a/"><span class="t">Upgrade n8n Without Surprises</span><span class="l">A server update that pulls the newest image can change the UI and behavior overnight.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">silent stop</span><span class="chip">infra docker</span></span></a></li><li class="row" data-text="updating self-hosted n8n without surprises the interface or a node changes after an upgrade and you cannot tell why. infra_docker ops_safe_update err_silent_failure"><a href="../../p/updating-self-hosted-n8n-without-surprises-35adefbe/"><span class="t">Updating Self-Hosted n8n Without Surprises</span><span class="l">The interface or a node changes after an upgrade and you cannot tell why.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">infra docker</span><span class="chip">ops safe update</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Preventing VPS Disk Crashes with n8n Auto-Pruning", "datePublished": "2026-10-31", "description": "Execution history grows without limit unless you cap it.", "isBasedOn": "https://docs.n8n.io/hosting/scaling/execution-data/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

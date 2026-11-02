@@ -3,41 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Preventing Double Bookings in Chat Assistants · n8n Machine Knowledge Base</title>
+<title>Preventing Double Bookings in Chat Assistants · n8n Fixes</title>
 <meta name="description" content="Two customers pick the same slot within seconds and both get a confirmation.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/preventing-double-bookings-in-chat-assistants-0ca2bf5c/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Preventing Double Bookings in Chat Assistants · n8n Fixes">
+<meta property="og:description" content="Two customers pick the same slot within seconds and both get a confirmation.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/preventing-double-bookings-in-chat-assistants-0ca2bf5c/">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Preventing Double Bookings in Chat Assistants</h1>
-<p class="meta"><time>2026-11-02</time> · digest</p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
 
-<div class="body">Two customers pick the same slot within seconds and both get a confirmation.<br>
-<br>
-<b>1. The Race</b><br>
-• <b>Problem:</b> The flow checks free slots, then books later, and another run books in between.<br>
-• <b>Why:</b> n8n does not lock external resources for you.<br>
-<br>
-<b>2. The Fix</b><br>
-• Check availability again immediately before the write, in the same step.<br>
-• Store bookings in a database with a unique constraint on slot and resource.<br>
-• On a constraint error answer with the next free slots instead of failing.<br>
-• Limit parallel runs of the booking workflow if you cannot use a constraint.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/hosting/scaling/concurrency-control/" rel="nofollow noopener">n8n Concurrency Control Docs</a><br>
-Related community post: <a href="https://t.me/n8nAutomationHub/560" rel="nofollow noopener">1</a><br>
-💬 <a href="https://t.me/n8n_machine/8" rel="nofollow noopener">Discuss in n8n Production: Servers &amp; Cloud</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_duplicate_runs/">#err_duplicate_runs</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_postgres/">#node_postgres</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/arch_idempotency/">#arch_idempotency</a></p>
-<p class="cta"><a href="https://t.me/n8n_machine/29">Discuss this in the Telegram forum</a></p>
+<div class="prose">
+<p class="lead">Two customers pick the same slot within seconds and both get a confirmation.</p>
+<h2><span class="step">01</span>The Race</h2>
+<ul><li><b>Problem:</b> The flow checks free slots, then books later, and another run books in between.</li><li><b>Why:</b> n8n does not lock external resources for you.</li></ul>
+<h2><span class="step">02</span>The Fix</h2>
+<ul><li>Check availability again immediately before the write, in the same step.</li><li>Store bookings in a database with a unique constraint on slot and resource.</li><li>On a constraint error answer with the next free slots instead of failing.</li><li>Limit parallel runs of the booking workflow if you cannot use a constraint.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/hosting/scaling/concurrency-control/" rel="nofollow noopener">n8n Concurrency Control Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/n8nAutomationHub/560" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/err_duplicate_runs/" title="#err_duplicate_runs">duplicate runs</a><a class="chip" href="../../t/node_postgres/" title="#node_postgres">postgres</a><a class="chip" href="../../t/arch_idempotency/" title="#arch_idempotency">arch idempotency</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/29">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/stopping-webhook-timeouts-duplicate-executions-d08a3bf2/">Stopping Webhook Timeouts &amp; Duplicate Executions</a> <time>2026-10-31</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/fixing-0-item-drops-the-silent-if-node-halt-a7d8bc3c/">Fixing 0-Item Drops &amp; The Silent IF Node Halt</a> <time>2026-10-31</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Preventing Double Bookings in Chat Assistants", "datePublished": "2026-11-02", "description": "Two customers pick the same slot within seconds and both get a confirmation."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="stopping webhook timeouts &amp; duplicate executions slow webhooks make providers retry, and each retry is a new run. err_webhook_timeout err_duplicate_runs node_webhook node_respond_to_webhook arch_async_webhooks arch_idempotency"><a href="../../p/stopping-webhook-timeouts-duplicate-executions-d08a3bf2/"><span class="t">Stopping Webhook Timeouts &amp; Duplicate Executions</span><span class="l">Slow webhooks make providers retry, and each retry is a new run.</span><span class="m"><time datetime="2026-10-31">2026-10-31</time><span class="chip">webhook timeout</span><span class="chip">duplicate runs</span></span></a></li><li class="row" data-text="fixing 0-item drops &amp; the silent if node halt a query that returns nothing ends the run without an error. err_zero_items err_silent_stop node_if node_postgres node_airtable data_item_linking"><a href="../../p/fixing-0-item-drops-the-silent-if-node-halt-a7d8bc3c/"><span class="t">Fixing 0-Item Drops &amp; The Silent IF Node Halt</span><span class="l">A query that returns nothing ends the run without an error.</span><span class="m"><time datetime="2026-10-31">2026-10-31</time><span class="chip">zero items</span><span class="chip">silent stop</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Preventing Double Bookings in Chat Assistants", "datePublished": "2026-11-02", "description": "Two customers pick the same slot within seconds and both get a confirmation.", "isBasedOn": "https://docs.n8n.io/hosting/scaling/concurrency-control/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

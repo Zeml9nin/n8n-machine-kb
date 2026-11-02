@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Double Opt-In Funnel Without a Mailing Tool · n8n Machine Knowledge Base</title>
+<title>Double Opt-In Funnel Without a Mailing Tool · n8n Fixes</title>
 <meta name="description" content="Collect subscribers legally with three small workflows.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/double-opt-in-funnel-without-a-mailing-tool-6b20f2ee/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Double Opt-In Funnel Without a Mailing Tool · n8n Fixes">
+<meta property="og:description" content="Collect subscribers legally with three small workflows.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/double-opt-in-funnel-without-a-mailing-tool-6b20f2ee/">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Double Opt-In Funnel Without a Mailing Tool</h1>
-<p class="meta"><time>2026-11-02</time> · digest</p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
 
-<div class="body">Collect subscribers legally with three small workflows.<br>
-<br>
-<b>1. Building Blocks</b><br>
-• <b>Sign-up:</b> A <code>Webhook</code> stores the address as pending and mails a signed confirmation link.<br>
-• <b>Signature:</b> Sign the token with the <code>Crypto</code> node (HMAC) and add an expiry time.<br>
-<br>
-<b>2. Confirm and Leave</b><br>
-• The confirm webhook verifies signature and expiry, then marks the contact confirmed.<br>
-• Put an unsubscribe link in every mail and handle it with its own webhook.<br>
-• Never mail a contact whose status is not confirmed.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/" rel="nofollow noopener">n8n Webhook Node Docs</a><br>
-Related community post: <a href="https://t.me/n8nAutomationHub/555" rel="nofollow noopener">1</a><br>
-💬 <a href="https://t.me/n8n_machine/9" rel="nofollow noopener">Discuss in Start Here: n8n Fundamentals</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_webhook/">#node_webhook</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/node_code/">#node_code</a> <span>#integ_double_opt_in</span></p>
-<p class="cta"><a href="https://t.me/n8n_machine/30">Discuss this in the Telegram forum</a></p>
+<div class="prose">
+<p class="lead">Collect subscribers legally with three small workflows.</p>
+<h2><span class="step">01</span>Building Blocks</h2>
+<ul><li><b>Sign-up:</b> A <code>Webhook</code> stores the address as pending and mails a signed confirmation link.</li><li><b>Signature:</b> Sign the token with the <code>Crypto</code> node (HMAC) and add an expiry time.</li></ul>
+<h2><span class="step">02</span>Confirm and Leave</h2>
+<ul><li>The confirm webhook verifies signature and expiry, then marks the contact confirmed.</li><li>Put an unsubscribe link in every mail and handle it with its own webhook.</li><li>Never mail a contact whose status is not confirmed.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/" rel="nofollow noopener">n8n Webhook Node Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/n8nAutomationHub/555" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/node_webhook/" title="#node_webhook">webhook</a><a class="chip" href="../../t/node_code/" title="#node_code">code</a><span class="chip" title="#integ_double_opt_in">integ double opt in</span></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/30">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/meta-webhook-setup-fails-to-verify-f998a1e4/">Meta Webhook Setup Fails to Verify</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/develop-against-pinned-data-f0a54873/">Develop Against Pinned Data</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Double Opt-In Funnel Without a Mailing Tool", "datePublished": "2026-11-02", "description": "Collect subscribers legally with three small workflows."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="meta webhook setup fails to verify instagram and facebook refuse the callback url and no execution appears. err_webhook_timeout node_webhook integ_meta_webhook"><a href="../../p/meta-webhook-setup-fails-to-verify-f998a1e4/"><span class="t">Meta Webhook Setup Fails to Verify</span><span class="l">Instagram and Facebook refuse the callback URL and no execution appears.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">webhook timeout</span><span class="chip">webhook</span></span></a></li><li class="row" data-text="develop against pinned data stop calling paid apis every time you adjust one node. node_code data_pinning data_item_linking"><a href="../../p/develop-against-pinned-data-f0a54873/"><span class="t">Develop Against Pinned Data</span><span class="l">Stop calling paid APIs every time you adjust one node.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">code</span><span class="chip">data pinning</span></span></a></li><li class="row" data-text="webhook url shows localhost behind a proxy external services call an address that does not exist. node_webhook infra_reverse_proxy infra_docker"><a href="../../p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/"><span class="t">Webhook URL Shows localhost Behind a Proxy</span><span class="l">External services call an address that does not exist.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">webhook</span><span class="chip">infra reverse proxy</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Double Opt-In Funnel Without a Mailing Tool", "datePublished": "2026-11-02", "description": "Collect subscribers legally with three small workflows.", "isBasedOn": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>

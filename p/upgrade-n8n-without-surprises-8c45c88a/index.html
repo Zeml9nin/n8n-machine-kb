@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Upgrade n8n Without Surprises · n8n Machine Knowledge Base</title>
+<title>Upgrade n8n Without Surprises · n8n Fixes</title>
 <meta name="description" content="A server update that pulls the newest image can change the UI and behavior overnight.">
 <link rel="canonical" href="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">
-<link rel="alternate" type="application/atom+xml" href="https://zeml9nin.github.io/n8n-machine-kb/feed.xml">
-<link rel="stylesheet" href="https://zeml9nin.github.io/n8n-machine-kb/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315171a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%23f4f5f7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/atom+xml" title="n8n Fixes" href="../../feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="n8n Fixes">
+<meta property="og:title" content="Upgrade n8n Without Surprises · n8n Fixes">
+<meta property="og:description" content="A server update that pulls the newest image can change the UI and behavior overnight.">
+<meta property="og:url" content="https://zeml9nin.github.io/n8n-machine-kb/p/upgrade-n8n-without-surprises-8c45c88a/">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="https://zeml9nin.github.io/n8n-machine-kb/">n8n Machine</a> <a class="join" href="https://t.me/n8n_machine">Join the forum</a></header>
-<main>
-<article>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap">
+<a class="brand" href="../../"><span class="mark" aria-hidden="true"></span>n8n Fixes</a>
+<a class="join" href="https://t.me/n8n_machine">Ask in the forum</a>
+</div></header>
+<main id="main" class="wrap">
+<article class="post">
+<p class="eyebrow">Digest</p>
 <h1>Upgrade n8n Without Surprises</h1>
-<p class="meta"><time>2026-11-02</time> · digest</p>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-02">2026-11-02</time></dd></div>
+<div><dt>Checked against</dt><dd>docs.n8n.io</dd></div>
+<div><dt>Status</dt><dd>Original</dd></div>
+</dl>
 
-<div class="body">A server update that pulls the newest image can change the UI and behavior overnight.<br>
-<br>
-<b>1. The Risk</b><br>
-• <b>Problem:</b> Using <code>latest</code> upgrades n8n on every pull, sometimes mid-project.<br>
-• <b>Why:</b> Nobody chose that version, so nobody tested it.<br>
-<br>
-<b>2. Safer Routine</b><br>
-• Pin the image tag in <code>docker-compose.yml</code> and change it on purpose.<br>
-• Back up the database and the <code>.n8n</code> folder before each upgrade.<br>
-• Read the release notes, then upgrade a copy first.<br>
-<br>
-<b>Source:</b> <a href="https://docs.n8n.io/hosting/installation/docker/" rel="nofollow noopener">n8n Docker Docs</a><br>
-Related community post: <a href="https://t.me/n8n_community/237057" rel="nofollow noopener">1</a><br>
-💬 <a href="https://t.me/n8n_machine/6" rel="nofollow noopener">Discuss in n8n Lab: Self-Hosting &amp; Security</a></div>
-<p class="tags"><a href="https://zeml9nin.github.io/n8n-machine-kb/t/err_silent_stop/">#err_silent_stop</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/infra_docker/">#infra_docker</a> <a href="https://zeml9nin.github.io/n8n-machine-kb/t/infra_upgrades/">#infra_upgrades</a></p>
-<p class="cta"><a href="https://t.me/n8n_machine/43">Discuss this in the Telegram forum</a></p>
+<div class="prose">
+<p class="lead">A server update that pulls the newest image can change the UI and behavior overnight.</p>
+<h2><span class="step">01</span>The Risk</h2>
+<ul><li><b>Problem:</b> Using <code>latest</code> upgrades n8n on every pull, sometimes mid-project.</li><li><b>Why:</b> Nobody chose that version, so nobody tested it.</li></ul>
+<h2><span class="step">02</span>Safer Routine</h2>
+<ul><li>Pin the image tag in <code>docker-compose.yml</code> and change it on purpose.</li><li>Back up the database and the <code>.n8n</code> folder before each upgrade.</li><li>Read the release notes, then upgrade a copy first.</li></ul>
+<p class="source"><span class="k">Source</span><a href="https://docs.n8n.io/hosting/installation/docker/" rel="nofollow noopener">n8n Docker Docs</a></p>
+<p class="source"><span class="k">Community</span><a href="https://t.me/n8n_community/237057" rel="nofollow noopener">thread 1</a></p>
+</div>
+<div class="chips"><a class="chip" href="../../t/err_silent_stop/" title="#err_silent_stop">silent stop</a><a class="chip" href="../../t/infra_docker/" title="#infra_docker">infra docker</a><a class="chip" href="../../t/infra_upgrades/" title="#infra_upgrades">infra upgrades</a></div>
+<aside class="ask">
+<p><strong>Still stuck?</strong> Post your n8n version and the exact error in the thread.</p>
+<a class="btn" href="https://t.me/n8n_machine/43">Open the discussion</a>
+</aside>
 </article>
-<section><h2>Related</h2><ul><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/ui-looks-broken-after-an-update-dee0747e/">UI Looks Broken After an Update</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/schedule-trigger-fires-at-the-wrong-hour-d97708c9/">Schedule Trigger Fires at the Wrong Hour</a> <time>2026-11-02</time></li><li><a href="https://zeml9nin.github.io/n8n-machine-kb/p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/">Webhook URL Shows localhost Behind a Proxy</a> <time>2026-11-02</time></li></ul></section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Upgrade n8n Without Surprises", "datePublished": "2026-11-02", "description": "A server update that pulls the newest image can change the UI and behavior overnight."}</script>
+<section class="more"><h2 class="sub">Related fixes</h2><ul class="list"><li class="row" data-text="ui looks broken after an update greyed-out or half-loaded screens right after upgrading are often a stale browser or proxy cache. err_silent_stop infra_upgrades infra_reverse_proxy"><a href="../../p/ui-looks-broken-after-an-update-dee0747e/"><span class="t">UI Looks Broken After an Update</span><span class="l">Greyed-out or half-loaded screens right after upgrading are often a stale browser or proxy cache.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">silent stop</span><span class="chip">infra upgrades</span></span></a></li><li class="row" data-text="schedule trigger fires at the wrong hour a weekly report that arrives on friday evening for the wrong reason. err_silent_stop node_schedule_trigger infra_timezone"><a href="../../p/schedule-trigger-fires-at-the-wrong-hour-d97708c9/"><span class="t">Schedule Trigger Fires at the Wrong Hour</span><span class="l">A weekly report that arrives on Friday evening for the wrong reason.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">silent stop</span><span class="chip">schedule trigger</span></span></a></li><li class="row" data-text="webhook url shows localhost behind a proxy external services call an address that does not exist. node_webhook infra_reverse_proxy infra_docker"><a href="../../p/webhook-url-shows-localhost-behind-a-proxy-ad16bd16/"><span class="t">Webhook URL Shows localhost Behind a Proxy</span><span class="l">External services call an address that does not exist.</span><span class="m"><time datetime="2026-11-02">2026-11-02</time><span class="chip">webhook</span><span class="chip">infra reverse proxy</span></span></a></li></ul></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Upgrade n8n Without Surprises", "datePublished": "2026-11-02", "description": "A server update that pulls the newest image can change the UI and behavior overnight.", "isBasedOn": "https://docs.n8n.io/hosting/installation/docker/"}</script>
 </main>
-<footer>Independent engineering publication for n8n practitioners. Not affiliated with n8n GmbH.
-Every fix is checked against the official docs. <a href="https://t.me/n8n_machine">Ask in the Telegram forum</a>.</footer>
+<footer class="wrap foot">
+<p>n8n Fixes is written by the n8n Machine community: one problem per page, a fix you can apply, and the docs page it was checked against.</p>
+<p>Independent publication. Not affiliated with n8n GmbH. <a href="../../feed.xml">Atom feed</a></p>
+</footer>
 </body>
 </html>
